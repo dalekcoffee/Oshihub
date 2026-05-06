@@ -3,7 +3,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://hub.oshi.social',
+  site: 'https://dalekcoffee.github.io',
+  base: '/Oshihub',
   integrations: [
     starlight({
       title: 'OshiHub',
