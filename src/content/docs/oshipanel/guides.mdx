@@ -6,7 +6,7 @@ description: How to do things in AMP Panel
 import Frame from '../../../components/Frame.astro';
 
 <Frame>
-  <img src="/icons/AmpPanel-web.png" alt="AMP Panel" style={{ maxHeight: '200px' }} />
+  <img src={import.meta.env.BASE_URL + 'icons/AmpPanel-web.png'} alt="AMP Panel" style={{ maxHeight: '200px' }} />
 </Frame>
 
 <h1 class="oshi-hero-title">

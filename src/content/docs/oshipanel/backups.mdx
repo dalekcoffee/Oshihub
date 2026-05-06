@@ -7,7 +7,7 @@ import Frame from '../../../components/Frame.astro';
 import { Aside } from '@astrojs/starlight/components';
 
 <Frame>
-  <img src="/icons/AmpPanel-web.png" alt="AMP Panel" style={{ maxHeight: '200px' }} />
+  <img src={import.meta.env.BASE_URL + 'icons/AmpPanel-web.png'} alt="AMP Panel" style={{ maxHeight: '200px' }} />
 </Frame>
 
 <h1 class="oshi-hero-title">

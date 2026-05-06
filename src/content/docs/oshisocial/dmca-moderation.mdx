@@ -9,7 +9,7 @@ import Card from '../../../components/Card.astro';
 import { Aside } from '@astrojs/starlight/components';
 
 <Frame>
-  <img src="/icons/OshiSocial-web.png" alt="OshiSocial" style={{ maxHeight: '200px' }} />
+  <img src={import.meta.env.BASE_URL + 'icons/OshiSocial-web.png'} alt="OshiSocial" style={{ maxHeight: '200px' }} />
 </Frame>
 
 <h1 class="oshi-hero-title">

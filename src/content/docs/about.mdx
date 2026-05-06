@@ -10,7 +10,7 @@ import Steps from '../../components/Steps.astro';
 import Step from '../../components/Step.astro';
 
 <Frame>
-  <img src="/icons/OshiNetwork.png" alt="Oshi Network" style={{ maxHeight: '200px' }} />
+  <img src={import.meta.env.BASE_URL + 'icons/OshiNetwork.png'} alt="Oshi Network" style={{ maxHeight: '200px' }} />
 </Frame>
 
 <h1 class="oshi-hero-title">
@@ -33,7 +33,7 @@ OshiNetwork is NOT a business, and not for profit. **The goal is to cater to and
 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '40px' }}>
   <div style={{ marginBottom: '30px', textAlign: 'center' }}>
     <img
-      src="/images/Dalek.jpg"
+      src={import.meta.env.BASE_URL + 'images/Dalek.jpg'}
       style={{
         width: '400px',
         height: '400px',
@@ -68,7 +68,7 @@ What began as **Baka.Social 🐘** in 2022 has evolved into a comprehensive netw
       alignItems: 'center',
       minHeight: '180px'
     }}>
-      <img src="/images/OriginalLogo.png" alt="Original BakaSocial Logo" style={{ maxHeight: '150px', display: 'block', mixBlendMode: 'multiply' }} />
+      <img src={import.meta.env.BASE_URL + 'images/OriginalLogo.png'} alt="Original BakaSocial Logo" style={{ maxHeight: '150px', display: 'block', mixBlendMode: 'multiply' }} />
     </div>
     We launched as **Baka.Social**, a Mastodon server focused on creating a welcoming community-driven social platform
   </Step>
@@ -84,7 +84,7 @@ What began as **Baka.Social 🐘** in 2022 has evolved into a comprehensive netw
       alignItems: 'center',
       minHeight: '180px'
     }}>
-      <img src="/icons/OshiSocial-web.png" alt="OshiSocial Logo" style={{ maxHeight: '150px', display: 'block', mixBlendMode: 'screen' }} />
+      <img src={import.meta.env.BASE_URL + 'icons/OshiSocial-web.png'} alt="OshiSocial Logo" style={{ maxHeight: '150px', display: 'block', mixBlendMode: 'screen' }} />
     </div>
     Migrated from Mastodon to Sharkey, rebranding as **Oshi.Social** to better serve our community with enhanced features and capabilities
   </Step>
@@ -102,9 +102,9 @@ What began as **Baka.Social 🐘** in 2022 has evolved into a comprehensive netw
       flexWrap: 'wrap',
       minHeight: '130px'
     }}>
-      <img src="/icons/CarrdPro-web.png" alt="Carrd Pro Logo" style={{ maxHeight: '100px', display: 'block' }} />
-      <img src="/icons/AmpPanel-web.png" alt="AMP Panel Logo" style={{ maxHeight: '100px', display: 'block' }} />
-      <img src="/icons/Zernio.png" alt="Zernio (Formerly known as LATE) Logo" style={{ maxHeight: '100px', display: 'block' }} />
+      <img src={import.meta.env.BASE_URL + 'icons/CarrdPro-web.png'} alt="Carrd Pro Logo" style={{ maxHeight: '100px', display: 'block' }} />
+      <img src={import.meta.env.BASE_URL + 'icons/AmpPanel-web.png'} alt="AMP Panel Logo" style={{ maxHeight: '100px', display: 'block' }} />
+      <img src={import.meta.env.BASE_URL + 'icons/Zernio.png'} alt="Zernio (Formerly known as LATE) Logo" style={{ maxHeight: '100px', display: 'block' }} />
     </div>
     Began offering additional services including **Carrd Pro** for personal websites, **AMP Panel** for game server hosting, and **Zernio (Formerly known as LATE)** for social media management
   </Step>

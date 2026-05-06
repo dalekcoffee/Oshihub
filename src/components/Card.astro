@@ -44,6 +44,11 @@ if (background) styleParts.push(`background: ${background}`);
 const style = styleParts.join('; ');
 
 const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const withBase = (url?: string) => {
+  if (!url || isExternal(url)) return url;
+  return url.startsWith('/') ? `${base}${url}` : url;
+};
 ---
 
 {showcase ? (
@@ -51,7 +56,7 @@ const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url);
     {(icon || iconSrc) && (
       <div class="oshi-card-icon">
         {iconSrc
-          ? <img src={iconSrc} alt="" aria-hidden="true" class="oshi-card-icon-img" />
+          ? <img src={withBase(iconSrc)} alt="" aria-hidden="true" class="oshi-card-icon-img" />
           : <Icon name={icon as any} size="3rem" />
         }
       </div>
@@ -75,7 +80,7 @@ const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url);
           {docsHref && (
             <a
               class="oshi-card-btn oshi-card-btn--secondary"
-              href={docsHref}
+              href={withBase(docsHref)}
               target={isExternal(docsHref) ? '_blank' : undefined}
               rel={isExternal(docsHref) ? 'noopener noreferrer' : undefined}
             >
@@ -88,11 +93,11 @@ const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url);
     </div>
   </div>
 ) : (
-  <Tag class:list={['oshi-card', hasActions && 'oshi-card--has-actions']} href={!hasActions ? href : undefined} style={style}>
+  <Tag class:list={['oshi-card', hasActions && 'oshi-card--has-actions']} href={!hasActions ? withBase(href) : undefined} style={style}>
     {(icon || iconSrc) && (
       <div class="oshi-card-icon">
         {iconSrc
-          ? <img src={iconSrc} alt="" aria-hidden="true" class="oshi-card-icon-img" />
+          ? <img src={withBase(iconSrc)} alt="" aria-hidden="true" class="oshi-card-icon-img" />
           : <Icon name={icon as any} size="2.4rem" />
         }
       </div>
@@ -115,7 +120,7 @@ const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url);
         {docsHref && (
           <a
             class="oshi-card-btn oshi-card-btn--secondary"
-            href={docsHref}
+            href={withBase(docsHref)}
             target={isExternal(docsHref) ? '_blank' : undefined}
             rel={isExternal(docsHref) ? 'noopener noreferrer' : undefined}
           >

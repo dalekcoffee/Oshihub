@@ -9,7 +9,7 @@ import Card from '../../../components/Card.astro';
 import { Aside } from '@astrojs/starlight/components';
 
 <Frame>
-  <img src="/icons/Zernio.png" alt="Zernio" style={{ maxHeight: '200px' }} />
+  <img src={import.meta.env.BASE_URL + 'icons/Zernio.png'} alt="Zernio" style={{ maxHeight: '200px' }} />
 </Frame>
 
 <h1 class="oshi-hero-title">
@@ -37,12 +37,12 @@ A social media management platform designed to help you schedule and organize yo
   <Card title="TikTok" icon="tiktok" href="https://tiktok.com" />
   <Card title="YouTube" icon="youtube" href="https://youtube.com" />
   <Card title="Pinterest" icon="pinterest" href="https://pinterest.com" />
-  <Card title="Snapchat" iconSrc="/icons/platforms/snapchat.svg" href="https://snapchat.com" />
+  <Card title="Snapchat" iconsrc={import.meta.env.BASE_URL + 'icons/platforms/snapchat.svg'} href="https://snapchat.com" />
   <Card title="Threads" icon="threads" href="https://threads.net" />
   <Card title="Reddit" icon="reddit" href="https://reddit.com" />
   <Card title="Bluesky" icon="blueSky" href="https://bsky.app" />
   <Card title="Telegram" icon="telegram" href="https://telegram.org" />
-  <Card title="WhatsApp" iconSrc="/icons/platforms/whatsapp.svg" href="https://whatsapp.com" />
+  <Card title="WhatsApp" iconsrc={import.meta.env.BASE_URL + 'icons/platforms/whatsapp.svg'} href="https://whatsapp.com" />
   <Card title="Discord" icon="discord" href="https://discord.com" />
 </CardGrid>
 

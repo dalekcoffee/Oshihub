@@ -17,7 +17,7 @@ import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
 Display your currently playing music on your OshiSocial profile with ListenBrainz integration. This federated feature shows what you're listening to in real-time.
 
 <Frame>
-  <img src="/images/ListenBrainsExample.webp" alt="Example of ListenBrainz music tile on OshiSocial profile" style={{display: 'block', margin: '0 auto'}} />
+  <img src={import.meta.env.BASE_URL + 'images/ListenBrainsExample.webp'} alt="Example of ListenBrainz music tile on OshiSocial profile" style={{display: 'block', margin: '0 auto'}} />
 </Frame>
 
 ## What is ListenBrainz?
@@ -35,7 +35,7 @@ This feature is federated but requires compatible fediverse software to display 
     Visit [listenbrainz.org](https://listenbrainz.org) and click "Create Account"
 
     <Frame>
-      <img src="/images/ListenBrainsCreateAccount1.webp" alt="ListenBrainz signup page" style={{display: 'block', margin: '0 auto'}} />
+      <img src={import.meta.env.BASE_URL + 'images/ListenBrainsCreateAccount1.webp'} alt="ListenBrainz signup page" style={{display: 'block', margin: '0 auto'}} />
     </Frame>
 
     <Aside type="caution">
@@ -47,7 +47,7 @@ This feature is federated but requires compatible fediverse software to display 
     Navigate to **Settings → Profile** on OshiSocial and place your username here.
 
     <Frame>
-      <img src="/images/ListenBrainsCreateLinkAccount.webp" alt="OshiSocial profile settings page" style={{display: 'block', margin: '0 auto'}} />
+      <img src={import.meta.env.BASE_URL + 'images/ListenBrainsCreateLinkAccount.webp'} alt="OshiSocial profile settings page" style={{display: 'block', margin: '0 auto'}} />
     </Frame>
 
     Enter your ListenBrainz username from Step 1 in the designated field
@@ -73,7 +73,7 @@ Choose the integration method that matches how you listen to music:
         Go to your [ListenBrainz Music Service settings](https://listenbrainz.org/settings/music-services/)
 
         <Frame>
-          <img src="/images/ListenBrainsCreateAccount2.webp" alt="ListenBrainz Spotify connection page" style={{display: 'block', margin: '0 auto'}} />
+          <img src={import.meta.env.BASE_URL + 'images/ListenBrainsCreateAccount2.webp'} alt="ListenBrainz Spotify connection page" style={{display: 'block', margin: '0 auto'}} />
         </Frame>
       </Step>
 
