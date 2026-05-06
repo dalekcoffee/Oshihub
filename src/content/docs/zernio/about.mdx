@@ -1,0 +1,84 @@
+---
+title: About Zernio
+description: Learn about Zernio - A social media management platform for scheduling and organizing content
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/Zernio.png" alt="Zernio" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  About <span style={{ color: '#EB3514' }}>Zernio</span>
+</h1>
+
+## 🎉 Introducing <span style={{ color: '#EB3514' }}>Zernio</span> 🎉
+
+<Aside type="note">
+Link available on the network page! [Visit OshiHub](https://hub.oshi.social/)
+</Aside>
+
+A social media management platform designed to help you schedule and organize your social content all in one place!
+
+<Aside type="tip">
+**Premium Feature**: Upload your media once - Zernio automatically optimizes it for all platforms you post to! No need to create platform-specific versions. 🎉
+</Aside>
+
+## Supported Platforms
+
+<CardGrid cols={5} variant="icon-tile">
+  <Card title="Twitter/X" icon="twitter" href="https://x.com" />
+  <Card title="Instagram" icon="instagram" href="https://instagram.com" />
+  <Card title="Facebook" icon="facebook" href="https://facebook.com" />
+  <Card title="TikTok" icon="tiktok" href="https://tiktok.com" />
+  <Card title="YouTube" icon="youtube" href="https://youtube.com" />
+  <Card title="Pinterest" icon="pinterest" href="https://pinterest.com" />
+  <Card title="Snapchat" iconSrc="/icons/platforms/snapchat.svg" href="https://snapchat.com" />
+  <Card title="Threads" icon="threads" href="https://threads.net" />
+  <Card title="Reddit" icon="reddit" href="https://reddit.com" />
+  <Card title="Bluesky" icon="blueSky" href="https://bsky.app" />
+  <Card title="Telegram" icon="telegram" href="https://telegram.org" />
+  <Card title="WhatsApp" iconSrc="/icons/platforms/whatsapp.svg" href="https://whatsapp.com" />
+  <Card title="Discord" icon="discord" href="https://discord.com" />
+</CardGrid>
+
+<Aside type="note">
+**Twitter/X Support**: You can use your own API key (BYOK) or request access to the communal key covered by Dalek. See the [Twitter/X API Setup](/zernio/twitter-api) page for full details.
+</Aside>
+
+<Aside type="caution">
+Unfortunately, Zernio does not currently support OshiSocial specifically. This has been requested - if you want to support this feature request, please upvote and comment on the [Fediverse Platform Integrations](https://zernio.featurebase.app/p/fediverse-platform-integrations) feedback request! (Misskey API compatibility would enable OshiSocial support, as we run a fork of Misskey)
+</Aside>
+
+## 🤝 Access & Terms
+
+### Availability
+
+<Aside type="tip">
+Available to **OshiMembers** for free upon request with limited slots.
+</Aside>
+
+<Card title="Current Availability" icon="information">
+  **Slots Available: 41/50**
+
+  First come, first serve basis. If slots become full and new interested members request access, we will review and cleanup inactive slots (members inactive for over 6 months).
+</Card>
+
+### ⛑️ Terms of Service & Privacy Policy
+
+<Aside type="caution">
+**Important**: This platform is NOT hosted on OshiNetwork services. Zernio is operated by their own company with their own policies.
+</Aside>
+
+<CardGrid cols={2}>
+  <Card title="Terms of Service" icon="open-book" href="https://zernio.com/tos">
+    Review Zernio's Terms of Service
+  </Card>
+  <Card title="Privacy Policy" icon="information" href="https://zernio.com/privacy-policy">
+    Review Zernio's Privacy Policy
+  </Card>
+</CardGrid>

@@ -1,0 +1,260 @@
+---
+title: Migration Guides
+description: Simple guides to help you navigate between platforms and make the most of OshiSocial
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import Steps from '../../../components/Steps.astro';
+import Step from '../../../components/Step.astro';
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/OshiSocial-web.png" alt="OshiSocial" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  <span style={{ color: 'var(--primary)' }}>Oshi</span>Social Migration Guides
+</h1>
+
+<p class="oshi-hero-subtitle">
+  Simple guides to help you navigate between platforms and make the most of OshiSocial!
+</p>
+
+## Platform Comparison
+
+### Sharkey vs Mastodon Features
+
+<CardGrid cols={2}>
+  <Card title="Sharkey (OshiSocial)" icon="star">
+    - **React to post with Emoji** - Go beyond simple Likes with multiple reaction types
+    - **Built-in drive system** - Manage and organize your media files efficiently
+    - **Enhanced customization** - More UI options and themes available
+    - **Better threading display** - Improved conversation visualization
+    - **Post import support** - Can import posts and media when migrating
+  </Card>
+
+  <Card title="Mastodon" icon="list-format">
+    - **Wider app ecosystem** - More third-party apps available
+    - **Simpler interface** - Easier for beginners to navigate
+    - **Broader instance selection** - More servers to choose from
+    - **More established platform** - Larger overall user base
+  </Card>
+</CardGrid>
+
+### What Transfers Between Platforms
+
+**Always Transferable:**
+- ✅ Followers
+- ✅ Following lists
+- ✅ Bookmarks
+- ✅ Blocks and mutes
+
+**Platform-Specific Transfer Capabilities:**
+- **Mastodon → Sharkey:** ✅ Posts and media CAN be transferred
+- **Sharkey → Mastodon:** ❌ Posts and media CANNOT be transferred (Mastodon limitation)
+
+<Aside type="caution">
+When migrating, your old account will become a redirect-only account and will no longer be fully functional. Plan your migration carefully!
+</Aside>
+
+## Migration Guides
+
+<Tabs>
+  <TabItem label="Mastodon to Sharkey">
+    ## Migrating from Mastodon to Sharkey
+
+    ### Pre-Migration Steps
+
+    #### Step 1: Create Your User Archive
+
+    <Steps>
+      <Step title="Access Export Settings">
+        On your Mastodon instance, go to **Preferences → Import and Export**
+      </Step>
+      <Step title="Request Archive">
+        Click **"Request your archive"** to create a full backup
+      </Step>
+      <Step title="Wait for Notification">
+        Wait up to 24 hours for an email notification that your archive is ready
+      </Step>
+      <Step title="Download Archive">
+        Download the ZIP file containing your posts and media
+      </Step>
+    </Steps>
+
+    #### Step 2: Export Additional Data (Optional)
+
+    From the same Import and Export page, download CSV files for: Follows, Bookmarks, Blocks, Mutes
+
+    ### Migration Process
+
+    #### Phase 1: Setup New Sharkey Account
+
+    <Steps>
+      <Step title="Create Account">
+        Create your new account on the target Sharkey server (e.g., oshi.social)
+      </Step>
+      <Step title="Configure Migration Settings">
+        Navigate to **Settings → Account Migration**
+      </Step>
+      <Step title="Link Old Account">
+        Enter your old Mastodon handle (format: `@oldusername@example.com`)
+      </Step>
+      <Step title="Save Configuration">
+        Click **Save** to establish the link
+      </Step>
+    </Steps>
+
+    #### Phase 2: Initiate Migration from Mastodon
+
+    <Steps>
+      <Step title="Return to Old Account">
+        Log back into your OLD Mastodon account
+      </Step>
+      <Step title="Access Move Settings">
+        Go to **Preferences → Account → "Move to a different account"**
+      </Step>
+      <Step title="Enter New Handle">
+        Enter your NEW Sharkey handle (format: `@newusername@sharkey.server`)
+      </Step>
+      <Step title="Confirm Migration">
+        Enter your password and click **"Move followers"**
+      </Step>
+    </Steps>
+
+    <Aside type="note">
+    After this step, your old Mastodon account becomes redirect-only and followers will be moved to your new account.
+    </Aside>
+
+    ### Post-Migration: Import Your Data
+
+    <Steps>
+      <Step title="Access Import Settings">
+        On your NEW Sharkey account, go to **Settings → Import and export**
+      </Step>
+      <Step title="Upload Archive Files">
+        Upload your files: Archive ZIP for posts and media, CSV files for follows, bookmarks, blocks, and mutes
+      </Step>
+      <Step title="Monitor Upload Progress">
+        Watch for the upload indicator in the top right corner
+      </Step>
+      <Step title="Wait for Import">
+        Wait for the "import in progress" message. Imports can take many hours depending on data size.
+      </Step>
+    </Steps>
+
+    <Aside type="caution">
+    **Important Security Note:** After import completes, DELETE the uploaded ZIP files from your Sharkey drive as they are publicly accessible!
+    </Aside>
+
+    <Aside type="tip">
+    If an import fails, wait at least 24 hours before attempting again and contact an admin to avoid creating duplicate data.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Sharkey to Mastodon">
+    ## Migrating from Sharkey to Mastodon
+
+    <Aside type="note">
+    Due to Mastodon software limitations, posts and media CANNOT be transferred when migrating from Sharkey to Mastodon. Only followers, follows, bookmarks, blocks, and mutes can be migrated.
+    </Aside>
+
+    ### Pre-Migration: Export Your Data
+
+    <Steps>
+      <Step title="Access Export Settings">
+        On your Sharkey server, navigate to **Settings** (right sidebar)
+      </Step>
+      <Step title="Open Import/Export">
+        Select **"Import and Export"** from the settings menu
+      </Step>
+      <Step title="Export Your Data">
+        Export: Follows list, Bookmarks, Blocks list, Mutes list
+      </Step>
+      <Step title="Download Files">
+        Your exported files will be stored in your Sharkey drive for download
+      </Step>
+    </Steps>
+
+    ### Migration Process
+
+    #### Phase 1: Setup Mastodon Account
+
+    <Steps>
+      <Step title="Create New Account">
+        Create your new account on the destination Mastodon server
+      </Step>
+      <Step title="Access Account Settings">
+        Go to **Preferences → Account**
+      </Step>
+      <Step title="Create Account Alias">
+        Under "Moving from a different account," select **"Create an account alias"**
+      </Step>
+      <Step title="Enter Old Handle">
+        Enter your old Sharkey username (format: `@oldusername@sharkey.server`)
+      </Step>
+      <Step title="Confirm Alias">
+        Click **"Create alias"** to establish the connection
+      </Step>
+    </Steps>
+
+    #### Phase 2: Initiate Migration from Sharkey
+
+    <Steps>
+      <Step title="Return to Sharkey">
+        Log back into your OLD Sharkey account
+      </Step>
+      <Step title="Access Migration Settings">
+        Navigate to **Settings → Account Migration → "Migrate this account to a different one"**
+      </Step>
+      <Step title="Enter New Handle">
+        Enter your NEW Mastodon username and password
+      </Step>
+      <Step title="Confirm Migration">
+        Click **Migrate** to transfer your followers
+      </Step>
+    </Steps>
+
+    <Aside type="caution">
+    Your old Sharkey account will no longer be fully functional after migration. It will become a redirect-only account.
+    </Aside>
+
+    ### Post-Migration: Import Additional Data
+
+    <Steps>
+      <Step title="Access Import Settings">
+        Log into your NEW Mastodon account and go to **Preferences → "Import and export" → Import**
+      </Step>
+      <Step title="Upload CSV Files">
+        Upload the CSV files you exported from Sharkey: Follows list, Bookmarks, Blocks list, Mutes list
+      </Step>
+      <Step title="Process Imports">
+        Wait for each import to complete before starting the next one
+      </Step>
+    </Steps>
+
+    <Aside type="note">
+    Remember that your posts and media from Sharkey cannot be imported to Mastodon. Consider downloading your archive from Sharkey as a personal backup before migrating.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+## Best Practices for Migration
+
+### Before You Migrate
+- **Announce your move** - Let your followers know you're migrating in advance
+- **Backup everything** - Download all your data even if it can't be imported
+- **Update your bio** - Include your new handle in your old account's bio before migrating
+- **Choose timing wisely** - Migrate during low-activity periods to minimize disruption
+
+### After Migration
+- **Verify imports** - Check that your follows, blocks, and other data transferred correctly
+- **Update external links** - Change any websites or profiles that link to your old account
+- **Re-introduce yourself** - Make an introduction post on your new account
+- **Be patient** - It may take time for all followers to migrate and for federation to stabilize
+
+<Aside type="tip">
+Need help with your migration? Contact the OshiSocial admin team for assistance!
+</Aside>

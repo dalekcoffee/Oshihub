@@ -1,0 +1,11 @@
+---
+interface Props {
+  title: string;
+  open?: boolean;
+}
+const { title, open = false } = Astro.props;
+---
+<details class="oshi-accordion" open={open}>
+  <summary>{title}</summary>
+  <div class="oshi-accordion-body"><slot /></div>
+</details>

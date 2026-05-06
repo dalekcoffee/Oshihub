@@ -1,0 +1,10 @@
+---
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
+---
+<div class="oshi-step">
+  {title && <div class="oshi-step-title">{title}</div>}
+  <div class="oshi-step-body"><slot /></div>
+</div>

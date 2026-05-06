@@ -1,0 +1,41 @@
+---
+interface Props {
+  src: string;
+  title?: string;
+}
+const { src, title } = Astro.props;
+---
+<section class="oshi-status">
+  {title && <h2 class="oshi-status-title">{title}</h2>}
+  <div class="oshi-status-frame">
+    <iframe
+      class="htframe"
+      src={src}
+      width="100%"
+      scrolling="no"
+      style="border:none;"
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      title={title}
+    ></iframe>
+  </div>
+</section>
+
+<script
+  is:inline
+  src="https://static.hetrix.io/iframeResizer/iframeResizer.min.js"
+></script>
+<script is:inline>
+  // Initialise once the resizer script has loaded. The Hetrix iframe posts
+  // its content height back so we can size it without a scrollbar.
+  (function init() {
+    if (typeof window.iFrameResize === 'function') {
+      window.iFrameResize([{ log: false }], '.htframe');
+    } else {
+      window.addEventListener('load', () => {
+        if (typeof window.iFrameResize === 'function') {
+          window.iFrameResize([{ log: false }], '.htframe');
+        }
+      });
+    }
+  })();
+</script>

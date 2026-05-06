@@ -1,0 +1,157 @@
+---
+title: X/Twitter API Setup
+description: How to configure Twitter/X API credentials for Zernio social media scheduling
+---
+
+import Frame from '../../../components/Frame.astro';
+import Card from '../../../components/Card.astro';
+import Steps from '../../../components/Steps.astro';
+import Step from '../../../components/Step.astro';
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/Zernio.png" alt="Zernio" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  X/Twitter API Setup for <span style={{ color: '#EB3514' }}>Zernio</span>
+</h1>
+
+## 🔑 API Key Options
+
+To use Zernio with Twitter/X, you have two options for API credentials: use the communal API key provided by Dalek, or set up your own personal API key.
+
+<Aside type="caution">
+**Twitter/X has discontinued their free tier API.** All API access now operates on a pay-as-you-go model. This affects both the communal key and any personal keys you set up yourself.
+</Aside>
+
+<Tabs>
+  <TabItem label="🤝 Communal Key">
+
+    <Card title="Quick & Easy Setup" icon="rocket" color="#4ADE80">
+      The simplest way to get started is to use Zernio's communal API key. Dalek is currently covering this cost so it remains free for community members — no developer account needed.
+    </Card>
+
+    <Aside type="caution">
+    **Heads up about the future of the communal key.** Because Twitter/X no longer offers a free tier, the communal key has ongoing costs. Dalek is happy to cover it for now, but if usage grows to the point where costs become unsustainable, we may need to discontinue it.
+
+    If that happens, you'll have two paths forward:
+    - **Bring Your Own Key (BYOK)** - set up your own personal Twitter API key
+    - **Managed Key Service** - Dalek may offer a paid managed key option for those who prefer not to deal with setup
+
+    If anything changes, Dalek will communicate well in advance so no one gets caught off guard.
+    </Aside>
+
+    <Steps>
+      <Step title="Contact Dalek">
+        Reach out to Dalek through [OshiHub](https://hub.oshi.social/) and request access to the communal API key.
+      </Step>
+
+      <Step title="Get Configured">
+        Dalek will help configure your account with the communal credentials.
+      </Step>
+
+      <Step title="Start Using Zernio">
+        You're ready to start scheduling your posts!
+      </Step>
+    </Steps>
+
+    <Aside type="note">
+    **Benefits of using the communal key:**
+    - No developer account needed
+    - No configuration required
+    - Free while Dalek covers the cost
+    - Perfect for casual users
+    </Aside>
+
+  </TabItem>
+  <TabItem label="🔑 BYOK">
+
+    <Card title="Personal API Setup" icon="puzzle" color="#3B82F6">
+      For users who want full control over their API access, you can set up your own Twitter/X developer credentials under a pay-as-you-go plan.
+    </Card>
+
+    <Aside type="note">
+    **Benefits of using your own key:**
+    - Full control over your API access and usage
+    - Independent from shared resources
+    - You manage your own rate limits and spend
+    - Required for high-volume usage
+    </Aside>
+
+    <Aside type="caution">
+    **Security Warning**: Never share your API credentials with anyone except trusted support staff. These credentials provide full access to your Twitter account.
+    </Aside>
+
+    ## Setting Up Your Twitter/X API Credentials
+
+    <Steps>
+      <Step title="Go to Twitter Developer Portal">
+        Navigate to the [Twitter Developer Portal](https://developer.twitter.com/) and sign in with your Twitter/X account.
+      </Step>
+
+      <Step title="Create a Developer Account">
+        If you don't already have one, you'll need to apply for a developer account. Fill out the use case form when prompted.
+
+        <Aside type="tip">
+        💡 **If asked to describe your Twitter API use cases (250 characters), copy this text:**
+
+        > Our application enables users to schedule and publish text and media content to their own Twitter accounts using their personal API credentials. We access user profile data, publish tweets with media attachments, retrieve engagement metrics, and manage authentication.
+        </Aside>
+      </Step>
+
+      <Step title="Create a New Project and App">
+        From your developer dashboard, create a new **Project**, then create an **App** inside it. Give it a name you'll recognize (e.g., "Zernio Scheduler").
+      </Step>
+
+      <Step title="Set Spend Limits">
+        Before you do anything else, go to your **Billing & Usage** settings and configure a monthly spend cap.
+
+        <Aside type="caution">
+        **Set a spend limit — seriously.** Twitter/X operates on pay-as-you-go pricing with no free tier. Without a cap, unexpected usage spikes can result in charges you didn't plan for. Set a limit you're comfortable with before connecting your key to any app.
+        </Aside>
+      </Step>
+
+      <Step title="Configure App Permissions">
+        In your App settings, set the following permissions:
+        - **Read and Write** (for posting tweets)
+        - **Read Users** (for profile access)
+
+        Make sure you're on at least the **Basic** tier — this is required for write access (posting tweets).
+      </Step>
+
+      <Step title="Navigate to Keys and Tokens">
+        Go to the **Keys and Tokens** tab in your App settings.
+      </Step>
+
+      <Step title="Generate and Copy Your Credentials">
+        Generate and copy the following:
+        - **API Key** (Client ID)
+        - **API Key Secret** (Client Secret)
+
+        Store these somewhere safe — you won't be able to view the secret again after leaving the page.
+      </Step>
+
+      <Step title="Add the Redirect URI">
+        Under **User Authentication Settings**, add this redirect URI to your app:
+
+        `https://Zernio.com/api/v1/connect/twitter/callback`
+      </Step>
+
+      <Step title="Connect with Dalek">
+        Reach out to Dalek through [OshiHub](https://hub.oshi.social/) and provide your credentials. He'll help get your account configured in Zernio.
+      </Step>
+
+      <Step title="Start Using Zernio">
+        You're all set! Start scheduling your posts.
+      </Step>
+    </Steps>
+
+  </TabItem>
+</Tabs>
+
+## Need Help?
+
+<Card title="Contact Support" icon="external" href="https://hub.oshi.social/">
+  If you encounter any issues during setup, reach out to Dalek for assistance through OshiHub.
+</Card>

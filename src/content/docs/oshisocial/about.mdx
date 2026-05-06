@@ -1,0 +1,73 @@
+---
+title: About OshiSocial
+description: Learn about OshiSocial - the federated social platform for communities
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import Accordion from '../../../components/Accordion.astro';
+import AccordionGroup from '../../../components/AccordionGroup.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/OshiSocial-web.png" alt="OshiSocial" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  About <span style={{ color: 'var(--primary)' }}>Oshi</span>Social
+</h1>
+
+## 👋 Welcome to OshiSocial! 👋
+
+OshiSocial is a fediverse instance created for the English speaking VR Creators who enjoy content creation utilizing platforms such as VRChat and Resonite.
+
+<Aside type="note">
+Please be advised that while this community focuses on VR creators, it is not limited to it!
+**General posting is encouraged** so long as it abides by our [community guidelines](/oshisocial/community-guidelines) as well as US Law where our servers are hosted.
+</Aside>
+
+## 📃 Is OshiSocial Right for You? 📃
+
+<CardGrid cols={2}>
+  <Card title="✅ Good Fit" icon="approve-check" color="#22c55e">
+    - You want to build genuine friendships with other creators.
+    - You want a small, tight-knit creative community.
+  </Card>
+  <Card title="⛔ Not a Good Fit" icon="error" color="#ef4444">
+    - You are primarily an NSFW creator. ([Rule 3](/oshisocial/community-guidelines#3-nsfw-content-policy))
+    - Your main goal is farming engagement or follower counts.
+    - You need an algorithm to promote your content.
+    - You are located in or reside in an EU, EEA, or UK territory. ([Rule 8](/oshisocial/community-guidelines#8-regional-eligibility))
+  </Card>
+</CardGrid>
+
+<Aside type="caution">
+Please review [🤝 Joining OshiSocial 🤝](/oshisocial/joining) before signing up or we may reject your application!
+</Aside>
+
+## ❓ FAQ ❓
+
+<AccordionGroup>
+  <Accordion title="Are we allowed to post content other than VR/VRchat/Resonite?">
+    **YES!** — While OshiSocial is aimed at VR creators, the reason for this is NOT to limit what you post to VR content.
+    Show us your morning coffee, pet pics, the gym session, whatever you want!
+    The "VR Creator" audience is less about restricting the type of content, and more about building community/culture that understands each other 🥰.
+  </Accordion>
+  <Accordion title="What if I'm just getting started and I don't have any content yet?">
+    No worries! You can sign up on any other instance, and once you have gained some experience and confirmed content creation is for you, we can help you migrate over!
+    OshiSocial allows you to move your account over and bring all your old followers, posts, media!
+    After migration anyone who looks up your old account will also be redirected to your Oshi account!
+  </Accordion>
+  <Accordion title="Why only creators, what about friends, or fans?">
+    It is a tale old as time for fediverse instances to allow more people in than they can handle.
+    Admins become overwhelmed, costs get out of hand, and they struggle to afford staying online.
+    OshiSocial wants to take a responsible approach at staying online and reliable.
+    Thanks to the fediverse, you can connect with friends and fans across any instance!
+    We aim to foster connections among VR creators, artists, modelers, riggers, and other professionals.
+    By prioritizing the core community of the instance for creators rather than a general-purpose platform, we believe we can greatly enhance the experience and maintain a viable model in the long term.
+  </Accordion>
+  <Accordion title="How is OshiSocial Funded?">
+    Please check out our [🏦 Funding 🏦](/oshisocial/funding) page for more info!
+  </Accordion>
+</AccordionGroup>

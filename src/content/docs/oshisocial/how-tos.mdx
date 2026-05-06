@@ -1,0 +1,369 @@
+---
+title: OshiSocial How-to Guides
+description: Step-by-step tutorials for using OshiSocial features and customizing your experience
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import Steps from '../../../components/Steps.astro';
+import Step from '../../../components/Step.astro';
+import Accordion from '../../../components/Accordion.astro';
+import AccordionGroup from '../../../components/AccordionGroup.astro';
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/OshiSocial-web.png" alt="OshiSocial" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  <span style={{ color: 'var(--primary)' }}>Oshi</span>Social How-to Guides
+</h1>
+
+<p class="oshi-hero-subtitle">
+  Complete tutorials and guides for mastering OshiSocial features
+</p>
+
+---
+
+## Fediverse Culture & Tips
+
+<Aside type="note">
+**Post however you wish, it's your content!** Just remember to comply with our Community Guidelines. These tips will help enhance your fediverse presence and avoid common mistakes.
+</Aside>
+
+### ✅ Do's - Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use Emoji to Enhance Your Posts">
+    Consider using emoji to spice up your posts! They help beautify text posts and make them more engaging for your audience. Emoji can convey tone, add personality, and make your content stand out in timelines.
+  </Accordion>
+
+  <Accordion title="Use Hashtags Wisely">
+    Hashtags are essential for new users because **posts without hashtags are mostly only visible to your followers and local instance**. Many Mastodon and fediverse users discover content by following hashtags like topics, making them crucial for expanding your reach.
+
+    **Best practices:**
+    - Use relevant hashtags that match your content
+    - Include 2-5 hashtags per post for optimal discovery
+    - Check trending hashtags for current conversations
+    - Create descriptive hashtags for niche topics
+    - Hashtags can be placed in the body or after posts
+  </Accordion>
+</AccordionGroup>
+
+### ❌ Don'ts - Common Mistakes to Avoid
+
+<Aside type="caution">
+The fediverse has different cultural norms than mainstream social media platforms. Respecting these differences is key to becoming a valued community member.
+</Aside>
+
+<AccordionGroup>
+  <Accordion title="Don't Abuse Hashtags">
+    **This isn't Instagram!** Excessive or irrelevant hashtag use is considered spam and desperate behavior in the fediverse. Using unrelated hashtags just to gain visibility will very likely get you blocked and/or reported.
+
+    **What to avoid:**
+    - Stuffing posts with 10+ hashtags
+    - Using popular but unrelated hashtags
+    - Adding hashtags that don't match your content
+    - Hashtag spam in replies or comments
+
+    <Aside type="note">
+    Remember: People who follow hashtags see everything tagged with them. Irrelevant posts will anger topic followers and lead to blocks and reports.
+    </Aside>
+  </Accordion>
+
+  <Accordion title="Avoid Double Posting with Hashtags">
+    While having backup accounts is understandable, posting identical content across multiple accounts creates duplicates in topic feeds. When users follow a hashtag, they'll see the same content multiple times, which is frustrating.
+
+    **Consequences:**
+    - You'll very likely be blocked and/or reported for spam
+    - Damages your reputation across instances
+    - Reduces engagement on all your accounts
+
+    **Better approach:**
+    - Share different aspects or perspectives on each account
+    - Use boosts/reblogs to cross-promote
+    - Download backups instead of creating duplicate accounts for archival
+    - Ensure unique content across different accounts when posting similar topics
+  </Accordion>
+</AccordionGroup>
+
+### ❕ Important Considerations
+
+<Aside type="note">
+**Alt-Text for Images**: The fediverse is **VERY inclusive of the visually impaired**. While not technically mandatory, **it is considered rude to not include alt-text** from a cultural perspective.
+</Aside>
+
+Adding alt-text may be extra work, but it's a crucial accessibility feature that:
+- Helps screen reader users understand image content
+- Provides context when images fail to load
+- Improves searchability of your posts
+- Shows respect for all community members
+
+<Aside type="tip">
+**Quick Alt-Text Tips:**
+- Describe what's important in the image
+- Include text that appears in the image
+- Keep descriptions concise but informative
+- Mention colors, emotions, or actions if relevant
+- Consider the context and purpose of the image
+</Aside>
+
+<Aside type="note">
+We acknowledge that adding alt-text to every image may be "too much extra work" for some users, but making an effort when possible is greatly appreciated by the community.
+</Aside>
+
+### Additional Cultural Guidelines
+
+<Tabs>
+  <TabItem label="Content Warnings">
+    Use content warnings (CW) for:
+    - Political discussions
+    - Mental health topics
+    - Food posts (for those with eating disorders)
+    - Eye contact in photos
+    - Animated GIFs (for those with epilepsy)
+    - Spoilers for media
+    - NSFW content
+  </TabItem>
+  <TabItem label="Thread Etiquette">
+    - Number your threads (1/n, 2/n, etc.)
+    - Reply to yourself to maintain thread structure
+    - Use "thread" at the beginning for long posts
+    - Don't break threads with unrelated replies
+    - Consider using a blog for very long content
+  </TabItem>
+  <TabItem label="Boost vs Reply">
+    - Boost (reblog) to share with your followers
+    - Reply to add your thoughts
+    - Quote posts may not be available on all instances
+    - Don't boost old posts excessively
+    - Consider the original poster's preferences
+  </TabItem>
+</Tabs>
+
+---
+
+## ListenBrainz Integration
+
+<Steps>
+  <Step title="Connect Your Account">
+    Navigate to Settings → Integrations and locate the ListenBrainz section. Enter your ListenBrainz username to begin the connection process.
+  </Step>
+  <Step title="Authorize Access">
+    Click "Authorize" to grant OshiSocial permission to display your listening history. You'll be redirected to ListenBrainz for authentication.
+  </Step>
+  <Step title="Configure Display">
+    Choose how your "Now Playing" music tile appears on your profile. You can customize the visibility and update frequency.
+  </Step>
+</Steps>
+
+<Aside type="note">
+The "Now Playing" music tile will automatically update to show your current listening activity from any connected music service through ListenBrainz.
+</Aside>
+
+---
+
+## Advertisement Guidelines
+
+<Aside type="caution">
+Advertising on OshiSocial is meant to be used dominantly for fun and community engagement, not commercial purposes.
+</Aside>
+
+### Acceptable Advertising:
+- Creative projects and personal work
+- Community events and gatherings
+- Non-profit initiatives
+- Collaborative opportunities
+
+### Not Permitted:
+- Spam or repetitive commercial posts
+- MLM or pyramid schemes
+- Misleading or deceptive content
+- Excessive self-promotion
+
+---
+
+## Discover Content & Follow Topics
+
+<CardGrid cols={2}>
+  <Card title="Explore Hashtags" icon="magnifier">
+    Use hashtags to discover content about specific topics. Popular hashtags appear in the trending section.
+  </Card>
+  <Card title="Follow Topics" icon="star">
+    Save hashtags and create custom feeds to stay updated on topics you care about.
+  </Card>
+  <Card title="Federated Timeline" icon="list-format">
+    View the federated timeline to discover content from connected instances.
+  </Card>
+  <Card title="Local Timeline" icon="information">
+    Focus on your home instance's community by viewing the local timeline.
+  </Card>
+</CardGrid>
+
+---
+
+## Profile & Name Customization
+
+<Tabs>
+  <TabItem label="Display Name">
+    Your display name can include:
+    - Emoji and special characters
+    - Up to 30 characters
+    - Unicode support for multiple languages
+
+    To change: Settings → Profile → Display Name
+  </TabItem>
+  <TabItem label="Username">
+    Your @username is permanent and cannot be changed after account creation. Choose carefully!
+  </TabItem>
+  <TabItem label="Bio & Fields">
+    Customize your profile with:
+    - Bio text (up to 500 characters)
+    - Custom profile fields (up to 4)
+    - Links with verification support
+
+    To edit: Settings → Profile → Edit Profile
+  </TabItem>
+</Tabs>
+
+---
+
+## Theme Customization
+
+OshiSocial leverages Misskey/Sharkey's powerful customization capabilities:
+
+<AccordionGroup>
+  <Accordion title="Built-in Themes">
+    Choose from pre-installed themes:
+    - Light and Dark modes
+    - High contrast options
+    - Seasonal themes
+    - Community-created themes
+  </Accordion>
+
+  <Accordion title="UI Layout">
+    Customize your dashboard layout:
+    - Rearrange widgets
+    - Resize columns
+    - Hide/show interface elements
+    - Create multiple workspace layouts
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Preferences Backup
+
+<Steps>
+  <Step title="Export Settings">
+    Go to Settings → Data Export → Export Preferences. This creates a JSON file with all your customizations.
+  </Step>
+  <Step title="Save Backup">
+    Store the exported file in a safe location. Consider using cloud storage or version control.
+  </Step>
+  <Step title="Restore Settings">
+    To restore: Settings → Data Import → Import Preferences. Upload your backup file to restore all settings.
+  </Step>
+</Steps>
+
+---
+
+## Push Notifications
+
+### Enable Notifications:
+1. Click the notification bell icon in the top bar
+2. Select "Enable Push Notifications"
+3. Grant browser permission when prompted
+4. Customize which events trigger notifications
+
+### Disable Notifications:
+1. Access Settings → Notifications
+2. Toggle off "Push Notifications"
+3. Optionally revoke browser permissions
+
+<Aside type="note">
+Push notifications require a modern browser and may not work in private/incognito mode.
+</Aside>
+
+---
+
+## Reporting Content
+
+OshiSocial strives to provide best-effort moderation reactively. Here's how to report issues:
+
+<Aside type="caution">
+Always review the [Community Guidelines](/oshisocial/community-guidelines) before reporting.
+</Aside>
+
+### Report Types:
+- **Spam**: Unsolicited commercial content or repetitive posts
+- **Harassment**: Targeted attacks or unwanted contact
+- **Inappropriate Content**: Violations of community standards
+- **Impersonation**: Accounts pretending to be someone else
+
+### How to Report:
+1. Click the three-dot menu on any post or profile
+2. Select "Report"
+3. Choose the appropriate category
+4. Provide detailed context
+5. Submit for moderator review
+
+---
+
+## Mute & Block Features
+
+<Tabs>
+  <TabItem label="Muting">
+    **User Muting:**
+    - Hides posts from specific users
+    - They won't know they're muted
+    - Can still see their profile if visited directly
+
+    **Word Muting:**
+    - Filter posts containing specific terms
+    - Supports regular expressions
+    - Works across all timelines
+  </TabItem>
+  <TabItem label="Blocking">
+    **User Blocking:**
+    - Prevents all interaction
+    - Removes existing follows
+    - Blocks mentions and DMs
+
+    **Instance Blocking:**
+    - Blocks entire instances
+    - Useful for problematic servers
+    - Admin-level blocks available
+  </TabItem>
+  <TabItem label="Management">
+    View and manage all mutes/blocks:
+    - Settings → Mutes & Blocks
+    - Easy unmute/unblock options
+    - Import/export block lists
+    - Temporary mute durations
+  </TabItem>
+</Tabs>
+
+---
+
+## Additional Resources
+
+<CardGrid cols={2}>
+  <Card title="Community Guidelines" icon="open-book" href="/oshisocial/community-guidelines">
+    Read our complete community standards and expectations
+  </Card>
+  <Card title="Privacy & Safety" icon="information" href="/oshisocial/privacy-safety">
+    Important information about protecting your privacy
+  </Card>
+  <Card title="Migration Guides" icon="right-arrow" href="/oshisocial/migration-guides">
+    Moving from another instance or platform
+  </Card>
+  <Card title="Status Updates" icon="bars" href="/oshisocial/status-updates">
+    Current platform status and known issues
+  </Card>
+</CardGrid>
+
+<Aside type="note">
+These tutorials are regularly updated. For the latest information, check our [status updates](/oshisocial/status-updates) page.
+</Aside>

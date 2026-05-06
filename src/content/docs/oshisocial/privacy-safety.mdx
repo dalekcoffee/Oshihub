@@ -1,0 +1,98 @@
+---
+title: Privacy Safety Reminder
+description: Important privacy and safety information for OshiSocial users
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/OshiSocial-web.png" alt="OshiSocial Privacy Safety Reminder" style={{ borderRadius: '8px', maxHeight: '200px', objectFit: 'contain' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  <span style={{ color: 'var(--primary)' }}>Oshi</span>Social Privacy Safety Reminder
+</h1>
+
+## The Fediverse Isn't Private, and That's OK!
+
+Welcome to OshiSocial! We're thrilled to have you join our community where you can share art, posts, ideas, and connect with others. However, it's crucial to understand that this is a **public social platform**, not a place meant for private or secure conversations.
+
+Everything you post on the Fediverse should be considered public by default. Treat your interactions here as if you were speaking in a public square – visible to anyone who wants to listen.
+
+<Aside type="note">
+Remember: Your safety and privacy are important. Always err on the side of caution when sharing information online.
+</Aside>
+
+## Direct Messages Are Not Secure
+
+<Aside type="note">
+While OshiSocial doesn't monitor your Direct Messages (DMs), the federated nature of our platform means other servers could technically see or store messages that pass through them.
+</Aside>
+
+For truly private conversations, we strongly recommend using encrypted messaging platforms:
+
+- **Telegram** (Secret Chats feature)
+- **Discord** (Private servers or DMs)
+- **Signal** or other encrypted messengers
+- **Encrypted email services**
+
+These platforms are specifically designed with privacy and security in mind, unlike the inherently public nature of federated social networks.
+
+## File Upload Caution
+
+<Aside type="caution">
+**EXIF DATA WARNING:**
+Certain devices such as smartphones, drones, action cameras and more with built-in GPS modules may embed this information on your images.
+We recommend you compress images before uploading them to ensure any sensitive metadata (like location data) is removed.
+</Aside>
+
+When you upload files to OshiSocial, they become accessible via a public URL. This means:
+- Photos and videos can be viewed by anyone who has the link
+- Documents and other files are similarly accessible
+- There's no way to fully restrict access once a file is uploaded
+
+### Secure File Sharing Alternatives
+
+For private file sharing, consider using:
+- **Google Drive** (with proper permission settings)
+- **Proton Drive** (end-to-end encrypted)
+- **Dropbox** (with adjusted privacy settings)
+- **Discord DMs** (for smaller files)
+
+## Key Takeaways
+
+The Fediverse is **public by design**. This makes it excellent for:
+- Community interaction
+- Sharing creative work
+- Public discussions
+- Building connections
+
+But remember to:
+- Treat it like a public space
+- Use privacy-focused apps for sensitive content
+- Never share personal information publicly
+- Be mindful of metadata in your uploads
+
+<Aside type="note">
+Think before you post: Would you be comfortable with this information being permanently public?
+</Aside>
+
+## Additional Resources
+
+<CardGrid cols={2}>
+  <Card title="Terms of Service" icon="open-book" href="/oshisocial/terms">
+    Review our complete terms of service
+  </Card>
+  <Card title="Privacy Policy" icon="information" href="/oshisocial/privacy-policy">
+    Learn about how we handle your data
+  </Card>
+</CardGrid>
+
+## Need Help?
+
+If you have any questions or concerns about privacy and safety on OshiSocial, please don't hesitate to contact us:
+
+📧 **Email:** help@oshi.social

@@ -1,0 +1,215 @@
+---
+title: ListenBrainz Integration
+description: Set up the 'now playing' music tile feature on your OshiSocial profile using ListenBrainz
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import Steps from '../../../components/Steps.astro';
+import Step from '../../../components/Step.astro';
+import Accordion from '../../../components/Accordion.astro';
+import AccordionGroup from '../../../components/AccordionGroup.astro';
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+# ListenBrainz Integration
+
+Display your currently playing music on your OshiSocial profile with ListenBrainz integration. This federated feature shows what you're listening to in real-time.
+
+<Frame>
+  <img src="/images/ListenBrainsExample.webp" alt="Example of ListenBrainz music tile on OshiSocial profile" style={{display: 'block', margin: '0 auto'}} />
+</Frame>
+
+## What is ListenBrainz?
+
+ListenBrainz is an open-source music listening tracker that integrates with OshiSocial (powered by Sharkey fediverse software) to display your "now playing" music on your profile. This creates a dynamic music tile that updates automatically as you listen.
+
+<Aside type="note">
+This feature is federated but requires compatible fediverse software to display properly on other instances.
+</Aside>
+
+## Quick Setup Guide
+
+<Steps>
+  <Step title="Create Your ListenBrainz Account">
+    Visit [listenbrainz.org](https://listenbrainz.org) and click "Create Account"
+
+    <Frame>
+      <img src="/images/ListenBrainsCreateAccount1.webp" alt="ListenBrainz signup page" style={{display: 'block', margin: '0 auto'}} />
+    </Frame>
+
+    <Aside type="caution">
+    Remember your username! You'll need it to connect ListenBrainz to OshiSocial.
+    </Aside>
+  </Step>
+
+  <Step title="Connect to OshiSocial">
+    Navigate to **Settings → Profile** on OshiSocial and place your username here.
+
+    <Frame>
+      <img src="/images/ListenBrainsCreateLinkAccount.webp" alt="OshiSocial profile settings page" style={{display: 'block', margin: '0 auto'}} />
+    </Frame>
+
+    Enter your ListenBrainz username from Step 1 in the designated field
+  </Step>
+
+  <Step title="Connect Your Music Service">
+    Choose one of the integration methods below based on your preferred music platform
+  </Step>
+</Steps>
+
+## Music Service Integrations
+
+Choose the integration method that matches how you listen to music:
+
+<Tabs>
+  <TabItem label="Spotify">
+    ### Spotify Integration (Recommended)
+
+    The easiest and most reliable integration for Spotify users.
+
+    <Steps>
+      <Step title="Open Music Service Settings">
+        Go to your [ListenBrainz Music Service settings](https://listenbrainz.org/settings/music-services/)
+
+        <Frame>
+          <img src="/images/ListenBrainsCreateAccount2.webp" alt="ListenBrainz Spotify connection page" style={{display: 'block', margin: '0 auto'}} />
+        </Frame>
+      </Step>
+
+      <Step title="Choose Integration Level">
+        Select **"Record listening history"** for the best experience
+
+        <Aside type="tip">
+        This option provides the most complete integration with real-time updates
+        </Aside>
+      </Step>
+
+      <Step title="Start Playing Music">
+        Begin playing music on Spotify. It may take a few songs before the tile appears on your profile.
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Browser Extension">
+    ### Web Scrobbler (Universal)
+
+    Works with YouTube, SoundCloud, Spotify Web, Apple Music Web, and more.
+
+    <Aside type="caution">
+    Always review browser extension permissions before installing. The Web Scrobbler is open-source and you can review its code on GitHub.
+    </Aside>
+
+    <Steps>
+      <Step title="Install Web Scrobbler">
+        Download from the [Web Scrobbler GitHub page](https://github.com/web-scrobbler/web-scrobbler)
+      </Step>
+
+      <Step title="Configure Extension">
+        After installation, configure which music services to track
+      </Step>
+
+      <Step title="Authenticate ListenBrainz">
+        When prompted, authenticate with your ListenBrainz account
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Apple Music">
+    ### Apple Music Integration
+
+    Requires an active Apple Music subscription.
+
+    <Aside type="note">
+    Apple Music integration requires re-authentication every 6 months due to Apple's security policies.
+    </Aside>
+
+    <Steps>
+      <Step title="Access Music Services">
+        Visit your ListenBrainz Music Service settings
+      </Step>
+
+      <Step title="Connect Apple Music">
+        Follow the Apple Music connection prompts
+      </Step>
+
+      <Step title="Grant Permissions">
+        Authorize ListenBrainz to access your Apple Music listening data
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Other Options">
+    ### Alternative Integration Methods
+
+    <CardGrid cols={2}>
+      <Card title="ListenBrainz Native Player" icon="star">
+        Use the built-in player on ListenBrainz website. Interface differs from mainstream platforms but works without additional setup.
+      </Card>
+
+      <Card title="Developer API" icon="puzzle">
+        Advanced users can integrate custom music sources using the ListenBrainz API documentation.
+      </Card>
+    </CardGrid>
+
+    <Aside type="caution">
+    **SoundCloud Integration**: Currently broken as of August 2024. Check ListenBrainz updates for restoration status.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Music not showing on profile">
+    - Verify your ListenBrainz username is correctly entered in OshiSocial settings
+    - Check that your music service is actively sending data to ListenBrainz
+    - Some tracks may take 2-3 songs to start displaying
+    - Ensure your profile visibility settings allow the music tile to show
+  </Accordion>
+
+  <Accordion title="Integration stopped working">
+    - Re-authenticate your music service on ListenBrainz
+    - For Apple Music: Re-authentication required every 6 months
+    - Check if browser extensions need updating
+    - Verify ListenBrainz service status
+  </Accordion>
+
+  <Accordion title="Music tile not visible to others">
+    The music tile feature requires compatible fediverse software. Users on instances running Sharkey, Misskey, or compatible forks will see your music. Mastodon and some other platforms may not display this feature.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Experience
+
+<CardGrid cols={2}>
+  <Card title="Single Setup" icon="approve-check">
+    In most cases, only one integration method is needed unless you use multiple music platforms regularly.
+  </Card>
+
+  <Card title="Privacy Consideration" icon="information">
+    Your listening history becomes public. Consider what you're comfortable sharing before enabling.
+  </Card>
+
+  <Card title="Federation Limits" icon="list-format">
+    This feature works best within Sharkey/Misskey-compatible instances.
+  </Card>
+
+  <Card title="Performance" icon="star">
+    The music tile updates in near real-time without affecting your profile's loading speed.
+  </Card>
+</CardGrid>
+
+## Platform Compatibility
+
+| Platform | Integration Method | Reliability |
+|----------|-------------------|-------------|
+| Spotify | Direct Integration | ⭐⭐⭐⭐⭐ Excellent |
+| YouTube | Web Scrobbler | ⭐⭐⭐⭐ Very Good |
+| Apple Music | Direct or Extension | ⭐⭐⭐ Good (needs re-auth) |
+| SoundCloud | Currently Broken | ❌ Unavailable |
+| Local Files | Developer API | ⭐⭐ Requires setup |
+
+<Aside type="note">
+This feature enhances your OshiSocial profile with dynamic music presence, making your profile more engaging and personal while connecting with others through shared musical interests.
+</Aside>

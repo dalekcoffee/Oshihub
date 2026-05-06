@@ -1,0 +1,76 @@
+---
+title: Joining OshiSocial
+description: Eligibility requirements and how to apply to join OshiSocial
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import Steps from '../../../components/Steps.astro';
+import Step from '../../../components/Step.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/OshiSocial-web.png" alt="OshiSocial" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  Joining <span style={{ color: 'var(--primary)' }}>Oshi</span>Social
+</h1>
+
+<p class="oshi-hero-subtitle">
+  If you wish to join, please see below for eligibility and required info at signup.
+</p>
+
+<Aside type="caution">
+**We encourage all prospective members to read our [🔨 Community Guidelines 🔨](/oshisocial/community-guidelines) before signing up.**
+</Aside>
+
+## Eligibility Requirements
+
+<CardGrid cols={2}>
+  <Card title="Active Creator" icon="approve-check">
+    You need to be an active creator for at least 2 months.
+
+    - We understand activity varies by the type of content you specialize in.
+  </Card>
+
+  <Card title="Content Alignment" icon="information">
+    Your content should align with our instance rules.
+
+    - Generally, we do not accept NSFW creators.
+  </Card>
+</CardGrid>
+
+## How to Apply
+
+<Aside type="note">
+In order to verify your identity and prevent creator impersonation.
+</Aside>
+
+<Steps>
+  <Step title="Add Your Handle">
+    Please add your desired handle to your primary platform and place it somewhere obvious/easy to find such as your channel bio or a twitch panel. You can remove this after your account is approved!
+
+    **(Example: @username@oshi.social)**
+  </Step>
+
+  <Step title="Visit OshiSocial">
+    Visit [https://oshi.social/](https://oshi.social/) and click on "Sign up at this instance"
+  </Step>
+
+  <Step title="Submit Application">
+    Please submit this info in the "Reason" for joining along with any message you want to pass to staff.
+
+    **(Example: Hey it's me! the handle is in my bio @ https://twitch.tv/yourname)**
+  </Step>
+
+  <Step title="Wait for Approval">
+    Please allow up to 48 hours for approval. We will try to get to these ASAP, but we might not be immediately available.
+  </Step>
+</Steps>
+
+<Aside type="note">
+Accounts that fail to submit the requested info under the reason for joining will be automatically rejected with or without notice.
+If you submitted the above info and have not heard back after 48hrs, feel free to contact us via email: help@oshi.social
+</Aside>

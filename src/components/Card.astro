@@ -1,0 +1,129 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+  title?: string;
+  icon?: string;
+  /** URL to a PNG/SVG image used instead of a named icon */
+  iconSrc?: string;
+  href?: string;
+  color?: string;
+  /** Optional gradient background, e.g. "linear-gradient(135deg, #2C407B 0%, #663D65 100%)" */
+  background?: string;
+  /** When provided, renders a "Launch" action button instead of making the whole card a link */
+  launchHref?: string;
+  /** When provided, renders a "Documentation" action button */
+  docsHref?: string;
+  /** Override the launch button label */
+  launchLabel?: string;
+  /** Override the docs button label */
+  docsLabel?: string;
+  /** Showcase mode: large centered icon + name, hover reveals description & actions */
+  showcase?: boolean;
+}
+const {
+  title,
+  icon,
+  iconSrc,
+  href,
+  color,
+  background,
+  launchHref,
+  docsHref,
+  launchLabel = 'Launch',
+  docsLabel = 'Documentation',
+  showcase = false,
+} = Astro.props;
+
+const hasActions = Boolean(launchHref || docsHref);
+const Tag = !hasActions && !showcase && href ? 'a' : 'div';
+
+const styleParts: string[] = [];
+if (color) styleParts.push(`--card-accent: ${color}`);
+if (background) styleParts.push(`background: ${background}`);
+const style = styleParts.join('; ');
+
+const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url);
+---
+
+{showcase ? (
+  <div class:list={['oshi-card', 'oshi-card--showcase']} style={style}>
+    {(icon || iconSrc) && (
+      <div class="oshi-card-icon">
+        {iconSrc
+          ? <img src={iconSrc} alt="" aria-hidden="true" class="oshi-card-icon-img" />
+          : <Icon name={icon as any} size="3rem" />
+        }
+      </div>
+    )}
+    {title && <div class="oshi-card-title" set:html={title} />}
+    <div class="oshi-card-reveal">
+      <div class="oshi-card-body"><slot /></div>
+      {hasActions && (
+        <div class="oshi-card-actions">
+          {launchHref && (
+            <a
+              class="oshi-card-btn oshi-card-btn--primary"
+              href={launchHref}
+              target={isExternal(launchHref) ? '_blank' : undefined}
+              rel={isExternal(launchHref) ? 'noopener noreferrer' : undefined}
+            >
+              <Icon name="external" size="0.95rem" />
+              <span>{launchLabel}</span>
+            </a>
+          )}
+          {docsHref && (
+            <a
+              class="oshi-card-btn oshi-card-btn--secondary"
+              href={docsHref}
+              target={isExternal(docsHref) ? '_blank' : undefined}
+              rel={isExternal(docsHref) ? 'noopener noreferrer' : undefined}
+            >
+              <Icon name="open-book" size="0.95rem" />
+              <span>{docsLabel}</span>
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+) : (
+  <Tag class:list={['oshi-card', hasActions && 'oshi-card--has-actions']} href={!hasActions ? href : undefined} style={style}>
+    {(icon || iconSrc) && (
+      <div class="oshi-card-icon">
+        {iconSrc
+          ? <img src={iconSrc} alt="" aria-hidden="true" class="oshi-card-icon-img" />
+          : <Icon name={icon as any} size="2.4rem" />
+        }
+      </div>
+    )}
+    {title && <div class="oshi-card-title" set:html={title} />}
+    <div class="oshi-card-body"><slot /></div>
+    {hasActions && (
+      <div class="oshi-card-actions">
+        {launchHref && (
+          <a
+            class="oshi-card-btn oshi-card-btn--primary"
+            href={launchHref}
+            target={isExternal(launchHref) ? '_blank' : undefined}
+            rel={isExternal(launchHref) ? 'noopener noreferrer' : undefined}
+          >
+            <Icon name="external" size="0.95rem" />
+            <span>{launchLabel}</span>
+          </a>
+        )}
+        {docsHref && (
+          <a
+            class="oshi-card-btn oshi-card-btn--secondary"
+            href={docsHref}
+            target={isExternal(docsHref) ? '_blank' : undefined}
+            rel={isExternal(docsHref) ? 'noopener noreferrer' : undefined}
+          >
+            <Icon name="open-book" size="0.95rem" />
+            <span>{docsLabel}</span>
+          </a>
+        )}
+      </div>
+    )}
+  </Tag>
+)}

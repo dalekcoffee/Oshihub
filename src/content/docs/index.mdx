@@ -1,0 +1,178 @@
+---
+title: OshiHub
+description: Services provided free of charge for the Oshi community
+template: splash
+prev: false
+next: false
+hero:
+  tagline: Services provided free of charge for the Oshi community
+  image:
+    html: '<img src="/icons/OshiNetwork.png" alt="OshiHub logo" style="max-height:260px;width:auto;filter:drop-shadow(0 8px 24px rgba(102,107,247,.4));" />'
+  actions:
+    - text: Join Discord
+      link: https://discord.gg/wuZemdgJTs
+      icon: discord
+      variant: primary
+    - text: Service Status
+      link: /#service-status
+      icon: down-caret
+      variant: secondary
+---
+
+import CardGrid from '../../components/CardGrid.astro';
+import Card from '../../components/Card.astro';
+import HetrixStatus from '../../components/HetrixStatus.astro';
+import Steps from '../../components/Steps.astro';
+import Step from '../../components/Step.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<div class="oshi-home">
+
+## 🌟 Main Services
+
+<CardGrid cols={4} showcase>
+  <Card
+    title="<span style='color: var(--primary)'>Oshi</span>Social"
+    iconSrc="/icons/OshiSocial-web.png"
+    launchHref="https://oshi.social/"
+    docsHref="/oshisocial/about/"
+    color="#666BF7"
+    showcase
+  >
+    Fediverse Server — join our social media platform as an alternative to traditional social networks.
+  </Card>
+
+  <Card
+    title="<span style='color: #089BDA'>AMP </span>Panel"
+    iconSrc="/icons/AmpPanel-web.png"
+    launchHref="https://panel.oshi.social"
+    docsHref="/oshipanel/about/"
+    color="#089BDA"
+    showcase
+  >
+    Game Server Hosting — self-service server hosting. <em>Temporarily offline.</em>
+  </Card>
+
+  <Card
+    title="<span style='color: #EB3514'>Zernio</span>"
+    iconSrc="/icons/Zernio.png"
+    launchHref="https://zernio.com/signin"
+    docsHref="/zernio/about/"
+    color="#EB3514"
+    showcase
+  >
+    Social Media Management — schedule and manage posts across multiple platforms.
+  </Card>
+
+  <Card
+    title="<span style='color: #785076'>Carrd Pro</span>"
+    iconSrc="/icons/Carrd.png"
+    launchHref="https://try.carrd.co/dalek"
+    docsHref="/carrd-pro/about/"
+    color="#785076"
+    showcase
+  >
+    Personal Site Hosting — create and host your personal website with Carrd Pro.
+  </Card>
+</CardGrid>
+
+<div id="service-status" />
+
+## 📊 Live Service Status
+
+<HetrixStatus src="https://wl.hetrixtools.com/r/cb45844691f93bfdd11b7a64cb4aac80/" title="" />
+
+## 🌐 What is OshiNetwork?
+
+You may be wondering what this service is, who runs it, what's the point, what do we do?
+OshiNetwork is a passion project run by me, [Dalek](https://dalek.coffee)!
+I run it both for personal use and also extending the benefits to communities I most closely relate with and wish to support.
+OshiNetwork is NOT a business, and not for profit. **The goal is to cater to and support community!**
+
+## 👤 Meet Dalek
+
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '40px' }}>
+  <div style={{ marginBottom: '30px', textAlign: 'center' }}>
+    <img
+      src="/images/Dalek.jpg"
+      style={{
+        width: '400px',
+        height: '400px',
+        borderRadius: '15px',
+        border: '3px solid var(--primary)',
+        objectFit: 'cover',
+        marginBottom: 0
+      }}
+    />
+  </div>
+  <div style={{ maxWidth: '400px', width: '100%' }}>
+    <Card title="Dalek's Website" icon="external" href="https://dalek.coffee">
+      Visit my website to learn more about me and my projects!
+    </Card>
+  </div>
+</div>
+
+## 📜 Our History
+
+What began as **Baka.Social 🐘** in 2022 has evolved into a comprehensive network of services.
+
+<Steps>
+  <Step title="2022 - The Beginning as Baka.Social">
+    <div style={{
+      backgroundColor: 'var(--card-bg)',
+      border: '1px solid var(--card-border)',
+      padding: '0 30px',
+      borderRadius: '12px',
+      marginBottom: '15px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '180px'
+    }}>
+      <img src="/images/OriginalLogo.png" alt="Original BakaSocial Logo" style={{ maxHeight: '150px', display: 'block', mixBlendMode: 'multiply' }} />
+    </div>
+    We launched as **Baka.Social**, a Mastodon server focused on creating a welcoming community-driven social platform.
+  </Step>
+  <Step title="2024 - Evolution to Oshi.Social">
+    <div style={{
+      backgroundColor: 'var(--card-bg)',
+      border: '1px solid var(--card-border)',
+      padding: '0 30px',
+      borderRadius: '12px',
+      marginBottom: '15px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '180px'
+    }}>
+      <img src="/icons/OshiSocial-web.png" alt="OshiSocial Logo" style={{ maxHeight: '150px', display: 'block', mixBlendMode: 'screen' }} />
+    </div>
+    Migrated from Mastodon to Sharkey, rebranding as **Oshi.Social** to better serve our community with enhanced features and capabilities.
+  </Step>
+  <Step title="2025 - Expanding the Network">
+    <div style={{
+      backgroundColor: 'var(--card-bg)',
+      border: '1px solid var(--card-border)',
+      padding: '0 30px',
+      borderRadius: '12px',
+      marginBottom: '15px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: '20px',
+      flexWrap: 'wrap',
+      minHeight: '130px'
+    }}>
+      <img src="/icons/CarrdPro-web.png" alt="Carrd Pro Logo" style={{ maxHeight: '100px', display: 'block' }} />
+      <img src="/icons/AmpPanel-web.png" alt="AMP Panel Logo" style={{ maxHeight: '100px', display: 'block' }} />
+      <img src="/icons/Zernio.png" alt="Zernio Logo" style={{ maxHeight: '100px', display: 'block' }} />
+    </div>
+    Began offering additional services including **Carrd Pro** for personal websites, **AMP Panel** for game server hosting, and **Zernio** for social media management.
+  </Step>
+</Steps>
+
+<div class="oshi-back-to-top">
+  <a href="#_top" class="oshi-back-to-top-link">↑ Back to top</a>
+</div>
+
+</div>

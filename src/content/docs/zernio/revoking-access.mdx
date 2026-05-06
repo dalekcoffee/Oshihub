@@ -1,0 +1,450 @@
+---
+title: Revoking Zernio Permissions
+description: How to safely disconnect Zernio from your social media accounts
+---
+
+import Frame from '../../../components/Frame.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+import Card from '../../../components/Card.astro';
+import Steps from '../../../components/Steps.astro';
+import Step from '../../../components/Step.astro';
+import Accordion from '../../../components/Accordion.astro';
+import AccordionGroup from '../../../components/AccordionGroup.astro';
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/Zernio.png" alt="Zernio" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">
+  Revoking <span style={{ color: '#EB3514' }}>Zernio</span> Permissions
+</h1>
+
+<p class="oshi-hero-subtitle">
+  How to safely disconnect Zernio from your connected accounts
+</p>
+
+## 🔐 Why You Might Need This
+
+If you're done using Zernio, switching to a different scheduling tool, or just want to clean up your connected apps, you'll need to revoke Zernio's permissions on each platform you connected.
+
+<Aside type="caution">
+**Revoking access is permanent.** You'll need to reconnect and re-authorize Zernio if you want to use it again later.
+</Aside>
+
+<Aside type="note">
+Removing Zernio's access stops it from posting on your behalf or reading your account data. However, **it doesn't delete posts Zernio already made** - those stay on your timeline unless you manually delete them.
+</Aside>
+
+## 📱 Platform-Specific Instructions
+
+---
+
+### 🎵 TikTok
+
+<Aside type="note">
+**TikTok app permission management is mobile only.** There is no equivalent setting available on the TikTok website.
+</Aside>
+
+<Steps>
+  <Step title="Open Your Profile">
+    Tap your **Profile** icon in the bottom-right corner of the TikTok app.
+  </Step>
+  <Step title="Access Settings">
+    Tap the **three-line menu** (hamburger icon) in the top-right corner.
+  </Step>
+  <Step title="Navigate to Security">
+    Select **Settings and Privacy** → **Account** → **Security and Permissions**.
+  </Step>
+  <Step title="Manage Apps">
+    Tap **Apps and Services Permissions** to see all connected apps.
+  </Step>
+  <Step title="Find and Remove">
+    Find **Zernio** (may also appear as **Social Media Connector**) in the list, tap it, then tap **Remove Access** and confirm.
+
+    <Frame>
+      <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+    </Frame>
+  </Step>
+</Steps>
+
+<Aside type="note">
+After removal, Zernio can no longer post videos or access your TikTok account info.
+</Aside>
+
+---
+
+### 📷 Instagram
+
+<Tabs>
+  <TabItem label="🌐 Web">
+    <Steps>
+      <Step title="Visit App Permissions">
+        Go to [instagram.com/accounts/manage_access/](https://www.instagram.com/accounts/manage_access/) in your browser.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** (may also appear as **Social Media Connector**) in the list, click **Remove**, and confirm when prompted.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="📱 Mobile (Personal)">
+    <Steps>
+      <Step title="Open Your Profile">
+        Tap your **profile icon** in the bottom-right corner.
+      </Step>
+      <Step title="App and Website Permissions">
+        Tap **App and Website Permissions** directly.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** in the list of connected apps, tap **Remove** next to it, and confirm.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="📱 Mobile (Business)">
+    <Steps>
+      <Step title="Open Settings">
+        Tap your **profile icon**, tap the **three-line menu**, then select **Settings and Privacy**.
+      </Step>
+      <Step title="Account Center Path">
+        Tap **Account Center** → **Apps and Websites**.
+      </Step>
+      <Step title="Find and Remove">
+        Look under the **Active** tab, find **Zernio**, tap **Remove** and confirm.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+### 🧵 Threads
+
+<Tabs>
+  <TabItem label="🌐 Web">
+    <Steps>
+      <Step title="Visit Website Permissions">
+        Go to [threads.com/settings/website_permissions](https://www.threads.com/settings/website_permissions) in your browser.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** (may also appear as **Social Media Connector**) in the list and remove it.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="📱 Mobile">
+    <Steps>
+      <Step title="Open Your Profile">
+        Tap your **profile icon** in the bottom-right corner of Threads.
+      </Step>
+      <Step title="Navigate to Website Permissions">
+        Tap the menu → **Account** → **Website Permissions**.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** in the list, tap it, and remove it.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+### 📘 Facebook
+
+<Tabs>
+  <TabItem label="🌐 Web">
+    <Steps>
+      <Step title="Access Settings">
+        Click your **profile icon** → **Settings & Privacy** → **Settings**.
+      </Step>
+      <Step title="Apps and Websites">
+        Click **Apps and Websites** in the left sidebar.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** in the list, click it, then click the **Remove** button.
+      </Step>
+    </Steps>
+
+    <Aside type="caution">
+    Facebook offers an option to **delete posts made by the app** when you remove access. If you want to keep your Zernio-posted content, make sure this option is **unchecked**.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="📱 Mobile">
+    <Steps>
+      <Step title="Open Menu">
+        Tap the **three-line menu** in the bottom-right (iOS) or top-right (Android).
+      </Step>
+      <Step title="Navigate to Apps">
+        Tap **Settings & Privacy** → **Settings** → **Apps and Websites**.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** in the list of connected apps, tap it, scroll down, and select **Remove**.
+      </Step>
+    </Steps>
+
+    <Aside type="caution">
+    Facebook offers an option to **delete posts made by the app** when you remove access. If you want to keep your Zernio-posted content, make sure this option is **unchecked**.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+### 𝕏 X (Twitter)
+
+<Aside type="note">
+X shows you exactly what permissions each app has (like "Read and Write" or "Direct Message Access"). Check these before revoking if you're unsure which app is which.
+</Aside>
+
+<Tabs>
+  <TabItem label="🌐 Web">
+    <Steps>
+      <Step title="Visit Connected Apps">
+        Go to [x.com/settings/connected_apps](https://x.com/settings/connected_apps) in your browser.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio** (may also appear as **Social Media Connector**, **OshiPost**, or **OshiZernio**) in the list and use **Revoke Access** to remove each one.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="📱 Mobile">
+    <Steps>
+      <Step title="Open Side Menu">
+        Tap your **profile icon** in the top-left corner.
+      </Step>
+      <Step title="Navigate to Apps">
+        Select **Settings and Privacy** → **Security and Account Access** → **Apps and Sessions** → **Connected Apps**.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio**, tap it, then tap **Revoke Access** and confirm.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+### 📌 Pinterest
+
+<Aside type="caution">
+**Pinterest permission management must be done via the web.** The mobile app does not support revoking third-party app access.
+</Aside>
+
+<Steps>
+  <Step title="Visit Security Settings">
+    Go to [pinterest.com/settings/security/](https://www.pinterest.com/settings/security/) in your browser.
+  </Step>
+  <Step title="Find and Remove">
+    Find **Zernio** in the list of connected apps, click **Delete** next to it, and confirm.
+
+    <Frame>
+      <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+### 🤖 Reddit
+
+<Aside type="caution">
+**Reddit permission management must be done via the web.** There is no equivalent option in the Reddit mobile app.
+</Aside>
+
+<Steps>
+  <Step title="Visit App Preferences">
+    Go to [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) in your browser.
+  </Step>
+  <Step title="Find and Remove">
+    Find **Zernio** (may also appear as **LATE** or **Social Media Connector**) in the list and click **revoke access**.
+
+    <Frame>
+      <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+### 🔵 Bluesky
+
+<Tabs>
+  <TabItem label="🌐 Web">
+    <Steps>
+      <Step title="Visit App Passwords">
+        Go to [bsky.app/settings/app-passwords](https://bsky.app/settings/app-passwords) in your browser.
+      </Step>
+      <Step title="Delete Zernio's Password">
+        Find the password you created for Zernio, then click the **trash can** or **Delete** icon.
+      </Step>
+    </Steps>
+  </TabItem>
+
+  <TabItem label="📱 Mobile">
+    <Steps>
+      <Step title="Open Settings">
+        In the Bluesky app, tap **Settings** → **Privacy and Security** → **App Passwords**.
+      </Step>
+      <Step title="Delete Zernio's Password">
+        Find the password you created for Zernio, then tap the **Delete** icon.
+      </Step>
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+### 🎮 Discord
+
+<Aside type="caution">
+**Zernio does NOT connect to your personal Discord account.** Instead, it installs a **bot** on your Discord server. To revoke access, you need to kick the bot from your server.
+</Aside>
+
+<Aside type="note">
+Only server admins or users with **Manage Server** permissions can remove bots.
+</Aside>
+
+<Steps>
+  <Step title="Open Server Settings">
+    Click your **server name** at the top of the channel list and select **Server Settings**.
+  </Step>
+  <Step title="Integrations">
+    Navigate to **Integrations** in the left sidebar.
+  </Step>
+  <Step title="Find and Remove">
+    Find **Zernio** in your list of bots. Click it, then select **Remove Integration** or **Kick** to revoke its access.
+
+    <Frame>
+      <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+### 📺 YouTube
+
+<Tabs>
+  <TabItem label="🌐 Web">
+    <Steps>
+      <Step title="Visit Google Connections">
+        Go to [myaccount.google.com/connections](https://myaccount.google.com/connections) in your browser.
+      </Step>
+      <Step title="Find and Remove">
+        Search for **Zernio** or **Social Media Connector**, click the result, then click **Delete all connections** and confirm.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+
+    <Aside type="tip">
+    If you're a YouTube creator, also check the **Permissions** tab in **YouTube Studio** to make sure no one was granted Manager or Editor roles through Zernio.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="📱 Mobile">
+    <Steps>
+      <Step title="Open Google Account">
+        Tap your **profile picture** in the YouTube app, then tap **Accounts** → **Manage your Google Account**.
+      </Step>
+      <Step title="Third-Party Apps">
+        Tap **Third-party apps & services**.
+      </Step>
+      <Step title="Find and Remove">
+        Find **Zernio**, tap it, then tap **Revoke access** and confirm.
+
+        <Frame>
+          <img src="/images/Zernio-SocialMediaConnector.png" alt="Social Media Connector app entry" />
+        </Frame>
+      </Step>
+    </Steps>
+  </TabItem>
+</Tabs>
+
+## ❓ Common Questions
+
+<AccordionGroup>
+  <Accordion title="Will my scheduled posts still publish after I revoke access?">
+    **No.** Once you revoke Zernio's permissions, it can no longer post to that platform. Any scheduled posts in your Zernio queue **will not publish** for that account.
+  </Accordion>
+
+  <Accordion title="Does revoking access delete my past posts?">
+    **No.** Content that Zernio already posted to your account stays there. You'll need to manually delete those posts if you want them removed. The exception is **Facebook**, which gives you the option to delete app-posted content when you revoke access.
+  </Accordion>
+
+  <Accordion title="What happens to data Zernio already collected?">
+    Revoking access prevents Zernio from making **future** requests for your data, but it doesn't automatically delete data they already have on their servers. If you want your data removed from Zernio's systems, you should **contact Zernio support directly** and request deletion under privacy laws like GDPR or CCPA.
+  </Accordion>
+
+  <Accordion title="Can I reconnect Zernio later if I change my mind?">
+    **Yes!** Revoking access isn't permanent in the sense that you can always re-authorize Zernio by going through the connection process again. You'll just need to grant permissions from scratch.
+  </Accordion>
+
+  <Accordion title="Do I need to revoke access on every platform separately?">
+    **Yes.** Each platform manages permissions independently, so you'll need to follow the steps for each social account you connected to Zernio. There's no "revoke all" button that works across platforms.
+  </Accordion>
+
+  <Accordion title="I don't see Zernio in my connected apps list. What does that mean?">
+    Either you never connected that platform to Zernio, or the connection was already removed. You're good to go for that platform.
+  </Accordion>
+</AccordionGroup>
+
+## 🛡️ After You Revoke
+
+<CardGrid cols={2}>
+  <Card title="✅ What Happens" icon="approve-check">
+    - Zernio can no longer post to your accounts
+    - Zernio can't read your profile data or posts
+    - Scheduled posts will not publish
+    - You can reconnect anytime by re-authorizing
+  </Card>
+
+  <Card title="❌ What Doesn't Happen" icon="error">
+    - Past posts are **not** automatically deleted
+    - Data Zernio already collected is **not** automatically deleted
+    - Your Zernio account itself is **not** deleted (you need to do that separately if wanted)
+  </Card>
+</CardGrid>
+
+<Aside type="note">
+If you want to **fully delete your Zernio account** (not just disconnect platforms), you'll need to do that from within Zernio's settings. That's a separate process from revoking platform permissions.
+</Aside>
+
+## 📧 Still Have Questions?
+
+If you run into issues or have questions about using Zernio with OshiNetwork services, reach out to the community:
+
+**Email:** help@oshi.social

@@ -1,0 +1,71 @@
+---
+title: Federation Transparency
+description: OshiSocial federation policies and moderation transparency report
+---
+
+import Frame from '../../../components/Frame.astro';
+import Accordion from '../../../components/Accordion.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Frame>
+  <img src="/icons/OshiSocial-web.png" alt="OshiSocial" style={{ maxHeight: '200px' }} />
+</Frame>
+
+<h1 class="oshi-hero-title">🌌 Federation 🌌</h1>
+
+Oshi.social has blocked communication or certain aspects with the following servers for various reasons which include but are not limited to:
+
+- Servers that do not align with our Community Guidelines
+- Servers that have no active or functioning moderation
+- Servers that have spam
+- Servers that have shut down
+
+## Server Moderation List
+
+<Accordion title="View Defederated Instances">
+
+  <Aside type="note">
+  This list shows instances that OshiSocial has restricted or blocked. Actions taken:
+  - **Blocked**: Not Reachable from Oshi.social
+  - **Silenced**: Hidden unless you follow first
+  - **NSFW**: Content automatically marked as NSFW
+  </Aside>
+
+  | Instance | Action | Reason |
+  |----------|--------|--------|
+  | bsky.brid.gy | NSFW | Some content does not align with our server guidelines. But it is not the whole instance culture. |
+  | M\*\*\*key.io | Instance and media silenced | Some content does not align with our server guidelines. But it is not the whole instance culture. |
+  | p\*\*\*o.net | Silenced & NSFW | Some content does not align with our server guidelines. But it is not the whole instance culture. |
+  | shit\*\*\*ter.club | Blocked | Instance shutdown, moved to shitposter.world but the old domain was causing backlog in our queue. |
+  | social.bo\*\*\*sser.systems | Blocked | Instance shutdown, moved to s.boykisser.systems but the old domain was causing backlog in our queue. |
+  | l\*\*\*y.world | Blocked | Causing TONS of database errors due to invalid notes sent |
+  | cut\*\*\*t\*\*rls.cafe | Blocked | Does not align with our server guidelines. |
+  | im\*\*\*o.exposed | Blocked | Does not align with our server guidelines. |
+  | 4\*\*\*key.net | Blocked | Does not align with our server guidelines. |
+  | r\*\*e.pet | Blocked | Does not align with our server guidelines. |
+  | b\*\*\*ag.net | Blocked | Does not align with our server guidelines. |
+  | det\*\*\*\*\*\*otcity.com | Blocked | Does not align with our server guidelines. |
+  | pos\*\*\*\*\*\*\*licon.rocks | Blocked | Does not align with our server guidelines. |
+  | a\*.\*iki | Blocked | Lots of spam from automated bots. |
+  | rss-mstdn.s\*\*\*iofr\*\*\*ia.com | Blocked | Lots of spam from automated bots. |
+  | lepou\*\*\*\*monde.com | Silenced | Majority of users are bots with tons of bot spam. |
+
+</Accordion>
+
+<Aside type="caution">
+Please be aware that some server names contain very malicious content, profanity and/or hate speech.
+We do NOT recommend our community members visit these sites as they also may contain very sensitive and/or illegal content.
+This list is provided with the intent of transparency in moderation.
+</Aside>
+
+## Appeal Process
+
+If you believe a server has been incorrectly blocked, you can appeal the decision through our [Google Forms appeal process](https://forms.google.com).
+
+## Cross-Reference
+
+You can verify this list against the [OshiSocial Federation information](https://oshi.social) for real-time federation status.
+
+<Aside type="note">
+This transparency page is focused on providing clear information about our federation decisions to prioritize community safety and comfort when engaging with other fediverse servers.
+</Aside>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  caption?: string;
+}
+const { caption } = Astro.props;
+---
+<figure class="oshi-frame-wrapper">
+  <div class="oshi-frame">
+    <slot />
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .oshi-frame-wrapper { margin: 1.5rem 0; }
+  figcaption {
+    text-align: center;
+    color: var(--sl-color-gray-3);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+</style>
