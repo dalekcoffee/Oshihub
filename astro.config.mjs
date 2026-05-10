@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://dalekcoffee.github.io',
-  base: '/Oshihub/',
+  site: 'https://hub.oshi.social',
   vite: {
     server: {
       watch: {
