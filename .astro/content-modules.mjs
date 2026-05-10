@@ -1,0 +1,26 @@
+
+export default new Map([
+["src/content/docs/about.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fabout.mdx&astroContentModuleFlag=true")],
+["src/content/docs/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Findex.mdx&astroContentModuleFlag=true")],
+["src/content/docs/carrd-pro/about.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fcarrd-pro%2Fabout.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/about.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fabout.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/community-guidelines.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fcommunity-guidelines.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/funding.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Ffunding.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/dmca-moderation.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fdmca-moderation.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/joining.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fjoining.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/history.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fhistory.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/how-tos.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fhow-tos.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/migration-guides.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fmigration-guides.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/listenbrainz.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Flistenbrainz.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/privacy-policy.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fprivacy-policy.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/privacy-safety.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fprivacy-safety.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/terms.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fterms.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/status-updates.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Fstatus-updates.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshisocial/transparency.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshisocial%2Ftransparency.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshipanel/about.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshipanel%2Fabout.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshipanel/backups.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshipanel%2Fbackups.mdx&astroContentModuleFlag=true")],
+["src/content/docs/oshipanel/guides.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Foshipanel%2Fguides.mdx&astroContentModuleFlag=true")],
+["src/content/docs/zernio/about.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fzernio%2Fabout.mdx&astroContentModuleFlag=true")],
+["src/content/docs/zernio/revoking-access.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fzernio%2Frevoking-access.mdx&astroContentModuleFlag=true")],
+["src/content/docs/zernio/twitter-api.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fzernio%2Ftwitter-api.mdx&astroContentModuleFlag=true")]]);
+		

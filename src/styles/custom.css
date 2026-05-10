@@ -658,7 +658,7 @@ figcaption {
 .oshi-accordion summary::marker { display: none; }
 
 .oshi-accordion summary::before {
-  content: '>';
+  content: '❯';
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -668,7 +668,7 @@ figcaption {
   border-radius: 5px;
   background: rgba(255,255,255,0.07);
   color: var(--sl-color-gray-2);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 900;
   line-height: 1;
   transition: transform 0.2s ease, background 0.15s ease, color 0.15s ease;

@@ -4,7 +4,15 @@ import starlight from '@astrojs/starlight';
 
 export default defineConfig({
   site: 'https://dalekcoffee.github.io',
-  base: '/Oshihub',
+  base: '/Oshihub/',
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+        interval: 1000,
+      },
+    },
+  },
   integrations: [
     starlight({
       title: 'OshiHub',
