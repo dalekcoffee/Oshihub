@@ -5,6 +5,7 @@ description: OshiSocial federation policies and moderation transparency report
 
 import Frame from '../../../components/Frame.astro';
 import Accordion from '../../../components/Accordion.astro';
+import ModerationList from '../../../components/ModerationList.astro';
 import { Aside } from '@astrojs/starlight/components';
 
 <Frame>
@@ -31,25 +32,7 @@ Oshi.social has blocked communication or certain aspects with the following serv
   - **NSFW**: Content automatically marked as NSFW
   </Aside>
 
-  | Instance | Action | Reason |
-  |----------|--------|--------|
-  | bsky.brid.gy | NSFW | Some content does not align with our server guidelines. But it is not the whole instance culture. |
-  | M\*\*\*key.io | Instance and media silenced | Some content does not align with our server guidelines. But it is not the whole instance culture. |
-  | p\*\*\*o.net | Silenced & NSFW | Some content does not align with our server guidelines. But it is not the whole instance culture. |
-  | shit\*\*\*ter.club | Blocked | Instance shutdown, moved to shitposter.world but the old domain was causing backlog in our queue. |
-  | social.bo\*\*\*sser.systems | Blocked | Instance shutdown, moved to s.boykisser.systems but the old domain was causing backlog in our queue. |
-  | l\*\*\*y.world | Blocked | Causing TONS of database errors due to invalid notes sent |
-  | cut\*\*\*t\*\*rls.cafe | Blocked | Does not align with our server guidelines. |
-  | im\*\*\*o.exposed | Blocked | Does not align with our server guidelines. |
-  | 4\*\*\*key.net | Blocked | Does not align with our server guidelines. |
-  | r\*\*e.pet | Blocked | Does not align with our server guidelines. |
-  | b\*\*\*ag.net | Blocked | Does not align with our server guidelines. |
-  | det\*\*\*\*\*\*otcity.com | Blocked | Does not align with our server guidelines. |
-  | pos\*\*\*\*\*\*\*licon.rocks | Blocked | Does not align with our server guidelines. |
-  | a\*.\*iki | Blocked | Lots of spam from automated bots. |
-  | rss-mstdn.s\*\*\*iofr\*\*\*ia.com | Blocked | Lots of spam from automated bots. |
-  | lepou\*\*\*\*monde.com | Silenced | Majority of users are bots with tons of bot spam. |
-  | www.g\*\*\*\*ly.ch | Blocked | Does not align with our server guidelines. |
+  <ModerationList />
 
 </Accordion>
 
