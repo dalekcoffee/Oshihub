@@ -24,3 +24,4 @@ rss-mstdn.s***iofr***ia.com | Blocked | Lots of spam from automated bots.
 lepou****monde.com | Silenced | Majority of users are bots with tons of bot spam.
 www.g****ly.ch | Blocked | Does not align with our server guidelines.
 un****ear.social | Blocked | Does not align with our server guidelines.
+xsca**.z**an.cc | Blocked | Bot Spam
